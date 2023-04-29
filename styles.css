@@ -70,6 +70,13 @@ h1 {
   border-style: none;
   box-shadow: -10px -10px 20px rgba(255, 255, 255, 0.05),
     10px 10px 20px rgba(0, 0, 0, 0.5);
+
+  /* Center the arrow on small screens */
+  @media screen and (max-width: 768px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 .scroll-to-top-button:hover {
@@ -79,6 +86,14 @@ h1 {
 
 
 /* Navigation styles */
+
+@media screen and (max-width: 768px) {
+  /* Reduce the width of the navigation links container for smaller screens */
+  .nav-links {
+    width: 70%;
+  }
+}
+
 nav {
   display: flex;
   justify-content: space-around;
@@ -152,7 +167,6 @@ nav {
 
 /* Graphs styles */
 .graphs {
-  margin: 2rem 0;
   text-align: center;
 }
 
@@ -160,7 +174,6 @@ nav {
   display: inline-block;
   width: 45%;
   height: 400px;
-  margin: 1rem;
   background-color: #2c3e50;
   border-radius: 10px;
   box-shadow: -10px -10px 20px rgba(255, 255, 255, 0.05),
