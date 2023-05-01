@@ -10,7 +10,8 @@ h1 {
 
 .line-circle {
   position: absolute;
-  left: calc(-20% - 20px); /* Adjust for circle size */
+  left: calc(-20% - 20px);
+  /* Adjust for circle size */
   height: 100%;
   width: 2px;
   background-color: #f0f0f0;
@@ -22,9 +23,12 @@ h1 {
 }
 
 .circle {
-  position: absolute; /* Add this */
-  top: 50%; /* Add this */
-  transform: translateY(-50%); /* Add this */
+  position: absolute;
+  /* Add this */
+  top: 50%;
+  /* Add this */
+  transform: translateY(-50%);
+  /* Add this */
   width: 40px;
   height: 40px;
   background-color: #f0f0f0;
@@ -87,38 +91,44 @@ h1 {
 
 /* Navigation styles */
 
-@media screen and (max-width: 768px) {
-  /* Reduce the width of the navigation links container for smaller screens */
-  .nav-links {
-    width: 70%;
-  }
-}
+
+
+
+
+
 
 nav {
   display: flex;
   justify-content: space-around;
   align-items: center;
   min-height: 8vh;
+  min-width: 8vh;
   background-color: #2c3e50;
   color: #fff;
   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
   font-family: Impact, Charcoal, sans-serif;
   border-radius: 8px;
   position: absolute;
-  top: 72%;
+  top: 80%;
+  /* Change this value to adjust the nav position */
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
+
 .nav-links {
   display: flex;
   justify-content: space-around;
-  width: 50%;
+  width: 70%;
+}
+
+#navWhole {
+  padding: 10px;
 }
 
 .nav-links li {
   list-style: none;
-  margin-top: 4%;
+  margin-top: 10%;
 }
 
 .nav-links a {
@@ -135,6 +145,25 @@ nav {
   color: #18a2b8;
   transition: all 1s ease-in-out;
 }
+
+
+/* Responsive Navigation */
+@media screen and (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+
+  .nav-mobile {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .nav-mobile {
+    display: none;
+  }
+}
+
 
 /* Hero image styles */
 .hero {
@@ -153,7 +182,7 @@ nav {
 
 .hero-text {
   position: absolute;
-  top: 50%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;

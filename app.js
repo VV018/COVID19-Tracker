@@ -311,20 +311,20 @@ async function generateGraphs(state) {
     borderColor: 'rgb(75, 192, 192)',
     tension: 0.1,
   }], dates, stateNameMap[state], 'COVID-19 Cumulative Cases', 'Cases');
-  
+
   createLineChart('graph2', [{
     label: 'Cumulative Deaths',
     data: deaths,
     borderColor: 'rgb(255, 99, 132)',
     tension: 0.1,
   }], dates, stateNameMap[state], 'COVID-19 Cumulative Deaths', 'Deaths');
-  
+
   createLineChart('graph3', [{
     label: 'Cumulative Vaccinations',
     data: interpolatedVaccinesDistributedData,
     borderColor: 'rgb(153, 102, 255)',
     tension: 0.1
-  }], dates, stateNameMap[state], 'COVID-19 Cumulative Vaccinations', 'Vaccinations');  
+  }], dates, stateNameMap[state], 'COVID-19 Cumulative Vaccinations', 'Vaccinations');
 }
 
 const scrollToTopButton = document.getElementById("scrollToTop");
@@ -342,3 +342,14 @@ window.addEventListener("scroll", () => {
 scrollToTopButton.addEventListener("click", () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
 });
+
+document.querySelector(".nav-mobile").addEventListener("click", function () {
+  const navLinks = document.querySelector(".nav-links");
+  if (navLinks.style.display === "none" || navLinks.style.display === "") {
+    navLinks.style.display = "block";
+  } else {
+    navLinks.style.display = "none";
+  }
+});
+
+
